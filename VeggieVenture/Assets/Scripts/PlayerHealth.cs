@@ -37,8 +37,6 @@ public class PlayerHealth : MonoBehaviour
 
         SceneManager.LoadScene(currentSceneIndex);
 
-        SoundManager.Instance.PlayDeathSound();
-
     }
 }
 
