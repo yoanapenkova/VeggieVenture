@@ -57,32 +57,15 @@
     <Analyzer Include="E:\install\Unity Editor\2022.3.0f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\ProductGameObject.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\HeatableProduct.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\ProductManager.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\CookingGameObject.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\Utilities\BasicCameraControl.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\OrderGenerator.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\FillCupHelper.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\Utilities\SliceHelper.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\CreateProductOnPlaceHolder.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\Utilities\BasicGameEvents.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\PlayerSlots.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\ProductType.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\DeleteProductOnSlot.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\PanGameObject.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\ReadyToServe.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\Product.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\CookableProduct.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\StoveGameObject.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\ProgressHelper.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\DrinkableProduct.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\ProductWithCover.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\Utilities\ScreenShotHelper.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\OnClickCoverHelper.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\ServeOrder.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\BewerageMaker.cs" />
-    <Compile Include="Assets\CoffeeShopStarterPack\Scripts\Microwave.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Materials\WorldMaterials\Shaders\WorldMatHDRPFree.shader" />
+    <None Include="Assets\Materials\WorldMaterials\Shaders\WorldMatLiteFree.shader" />
+    <None Include="Assets\Materials\WorldMaterials\Shaders\WorldMatFree.shader" />
+    <None Include="Assets\Materials\WorldMaterials\Shaders\WorldMatURPFree.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
