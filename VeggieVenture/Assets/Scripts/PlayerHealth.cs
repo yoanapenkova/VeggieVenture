@@ -17,10 +17,12 @@ public class PlayerHealth : MonoBehaviour
     public void LoseLife()
     {
         currentLives -= 1;
+        Debug.Log("te quedan " + currentLives + " vidas");
     
         if (currentLives <= 0)
         {
             //Dirigir a pantalla de Game Over
+            Debug.Log("Oh oh");
         }
     }
 
