@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class UIManager : MonoBehaviour
 {
@@ -65,7 +66,7 @@ public class UIManager : MonoBehaviour
     }
 
     // Método para ocultar el HUDScreen
-    public void HideHUDcreen()
+    public void HideHUDScreen()
     {
         HUDScreen.SetActive(false);
     }
@@ -73,14 +74,31 @@ public class UIManager : MonoBehaviour
     // Método para mostrar el GameOver
     public void ShowGameOverScreen()
     {
-        HUDScreen.SetActive(false);
         gameOverScreen.SetActive(true);
+        HideHUDScreen();
         levelOne.SetActive(false);
+        
+        /*
+        // Find existing Event System, if any
+        EventSystem existingEventSystem = FindObjectOfType<EventSystem>();
+        
+        // Destroy existing Event System
+        if (existingEventSystem != null)
+        {
+            Destroy(existingEventSystem.gameObject);
+        }
+
+        // Create a new Event System
+        GameObject eventSystemObject = new GameObject("EventSystem");
+        EventSystem newEventSystem = eventSystemObject.AddComponent<EventSystem>();
+        eventSystemObject.AddComponent<StandaloneInputModule>(); // Or any other input module you need
+        */
+
         Cursor.visible = true;
     }
 
     // Método para ocultar el GameOver
-    public void HideGameOvercreen()
+    public void HideGameOverScreen()
     {
         gameOverScreen.SetActive(false);
     }
@@ -90,9 +108,9 @@ public class UIManager : MonoBehaviour
     {
         // Aquí colocarías la lógica para iniciar el juego
         Debug.Log("Starting game...");
+        ShowHUDScreen();
         HideStartScreen();
         EnableLevel(levelOne);
-        ShowHUDScreen();
     }
 
     public void EnableLevel(GameObject level){

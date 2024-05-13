@@ -11,6 +11,8 @@ public class PlayerHealth : MonoBehaviour
     private Animator animator;
     public bool canTakeDamage = true;
 
+    public UIManager uiManager;
+
     void Start()
     {
         currentLives = maxLives;
@@ -33,7 +35,7 @@ public class PlayerHealth : MonoBehaviour
 
             animator.Play("Die");
             //StartCoroutine(WaitAndShowGameOverScreen());
-            UIManager.Instance.ShowGameOverScreen();
+            uiManager.ShowGameOverScreen();
 
         } else if (currentLives <=1)
         {
