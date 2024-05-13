@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2450570714393392853}
   - component: {fileID: 3007968630706824389}
   - component: {fileID: 439859274016621170}
-  - component: {fileID: 2791809750998080441}
-  - component: {fileID: 4761136005380925910}
+  - component: {fileID: 2546657539429943412}
+  - component: {fileID: 9148818117693452571}
   m_Layer: 0
   m_Name: Bundt Cake Piece
   m_TagString: Untagged
@@ -27,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7505057552385653104}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.354699, y: 0, z: 9.441638}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.39895996, y: 0.39896, z: 0.39895996}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3007968630706824389
 MeshFilter:
@@ -85,35 +85,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &2791809750998080441
-Rigidbody:
+--- !u!114 &2546657539429943412
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7505057552385653104}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!64 &4761136005380925910
-MeshCollider:
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a97be6bcc08ff2095bd78df32127f904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upTimeMin: 0.5
+  upTimeMax: 1
+  upDistance: 1
+--- !u!65 &9148818117693452571
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -130,7 +118,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2850398403932487639, guid: 891f176f80b7db54aa274734a9a837a8, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.301561, y: 0.4119011, z: 0.38460103}
+  m_Center: {x: 0.00013157085, y: 0.20595072, z: -0.035164997}
