@@ -25,10 +25,24 @@ public class PlayerHealth : MonoBehaviour
     
         if (currentLives <= 0)
         {
+            GameObject life1Object = GameObject.Find("Life1");
+            life1Object.SetActive(false);
+
             //Dirigir a pantalla de Game Over
             Debug.Log("Oh oh");
 
             animator.Play("Die");
+            //StartCoroutine(WaitAndShowGameOverScreen());
+            UIManager.Instance.ShowGameOverScreen();
+
+        } else if (currentLives <=1)
+        {
+            GameObject life2Object = GameObject.Find("Life2");
+            life2Object.SetActive(false);
+        } else if (currentLives <=2)
+        {
+            GameObject life3Object = GameObject.Find("Life3");
+            life3Object.SetActive(false);
         }
     }
 
@@ -49,6 +63,14 @@ public class PlayerHealth : MonoBehaviour
 
     public void EnableDamage(){
         canTakeDamage = true;
+    }
+
+    IEnumerator WaitAndShowGameOverScreen() {
+        // Wait for 1 second
+        yield return new WaitForSeconds(1);
+
+        // Call your function here
+        UIManager.Instance.ShowGameOverScreen();
     }
 }
 
