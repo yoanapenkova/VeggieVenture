@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: d15025cee003dc3149d6a3442677ece0
+  productGUID: faa2ddd8c4ee7fb9d91e5f258ece3fab
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: VeggieVenture
+  productName: MyTestProject
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -48,6 +48,7 @@ PlayerSettings:
   defaultScreenHeightWeb: 600
   m_StereoRenderingPath: 0
   m_ActiveColorSpace: 1
+  unsupportedMSAAFallback: 0
   m_SpriteBatchVertexThreshold: 300
   m_MTRendering: 1
   mipStripping: 0
@@ -75,6 +76,7 @@ PlayerSettings:
   androidMinimumWindowWidth: 400
   androidMinimumWindowHeight: 300
   androidFullscreenMode: 1
+  androidAutoRotationBehavior: 1
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
   runInBackground: 1
@@ -86,6 +88,7 @@ PlayerSettings:
   hideHomeButton: 0
   submitAnalytics: 1
   usePlayerLog: 1
+  dedicatedServerOptimizations: 0
   bakeCollisionMeshes: 0
   forceSingleInstance: 0
   useFlipModelSwapchain: 1
@@ -125,6 +128,7 @@ PlayerSettings:
   switchNVNMaxPublicTextureIDCount: 0
   switchNVNMaxPublicSamplerIDCount: 0
   switchNVNGraphicsFirmwareMemory: 32
+  switchMaxWorkerMultiple: 8
   stadiaPresentMode: 0
   stadiaTargetFramerate: 0
   vulkanNumSwapchainBuffers: 3
@@ -133,6 +137,8 @@ PlayerSettings:
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
+  visionOSBundleVersion: 1.0
+  tvOSBundleVersion: 1.0
   bundleVersion: 0.1
   preloadedAssets: []
   metroInputSource: 0
@@ -145,6 +151,7 @@ PlayerSettings:
   isWsaHolographicRemotingEnabled: 0
   enableFrameTimingStats: 0
   enableOpenGLProfilerGPURecorders: 1
+  allowHDRDisplaySupport: 0
   useHDRDisplay: 0
   hdrBitDepth: 0
   m_ColorGamuts: 00000000
@@ -181,6 +188,8 @@ PlayerSettings:
   tvOSSdkVersion: 0
   tvOSRequireExtendedGameController: 0
   tvOSTargetOSVersionString: 12.0
+  VisionOSSdkVersion: 0
+  VisionOSTargetOSVersionString: 1.0
   uIPrerenderedIcon: 0
   uIRequiresPersistentWiFi: 0
   uIRequiresFullScreen: 1
@@ -228,8 +237,10 @@ PlayerSettings:
   appleDeveloperTeamID: 
   iOSManualSigningProvisioningProfileID: 
   tvOSManualSigningProvisioningProfileID: 
+  VisionOSManualSigningProvisioningProfileID: 
   iOSManualSigningProvisioningProfileType: 0
   tvOSManualSigningProvisioningProfileType: 0
+  VisionOSManualSigningProvisioningProfileType: 0
   appleEnableAutomaticSigning: 0
   iOSRequireARKit: 0
   iOSAutomaticallyDetectAndAddCapabilities: 1
@@ -394,7 +405,7 @@ PlayerSettings:
   switchSocketConcurrencyLimit: 14
   switchScreenResolutionBehavior: 2
   switchUseCPUProfiler: 0
-  switchUseGOLDLinker: 0
+  switchEnableFileSystemTrace: 0
   switchLTOSetting: 0
   switchApplicationID: 0x01004b9000490000
   switchNSODependencies: 
@@ -524,7 +535,6 @@ PlayerSettings:
   switchSocketBufferEfficiency: 4
   switchSocketInitializeEnabled: 1
   switchNetworkInterfaceManagerInitializeEnabled: 1
-  switchPlayerConnectionEnabled: 1
   switchUseNewStyleFilepaths: 1
   switchUseLegacyFmodPriorities: 0
   switchUseMicroSleepForYield: 1
@@ -659,7 +669,6 @@ PlayerSettings:
   suppressCommonWarnings: 1
   allowUnsafeCode: 0
   useDeterministicCompilation: 1
-  selectedPlatform: 0
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
   gcIncremental: 1
@@ -667,14 +676,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: VeggieVenture
+  metroPackageName: MyTestProject
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: VeggieVenture
+  metroApplicationDescription: MyTestProject
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -688,6 +697,7 @@ PlayerSettings:
   metroTileBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21568628, a: 0}
   metroSplashScreenBackgroundColor: {r: 0.12941177, g: 0.17254902, b: 0.21568628, a: 1}
   metroSplashScreenUseBackgroundColor: 0
+  syncCapabilities: 0
   platformCapabilities: {}
   metroTargetDeviceFamilies: {}
   metroFTAName: 
@@ -741,12 +751,12 @@ PlayerSettings:
   hmiLogStartupTiming: 0
   hmiCpuConfiguration: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 2
+  activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: d1b9a042-ed07-48bc-b279-8f55c090e712
+  cloudProjectId: ea1ea531-dd22-4362-9314-f592fa0bdca2
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: VeggieVenture
+  projectName: MyTestProject
   organizationId: yoanaguiri
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

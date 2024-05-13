@@ -11,7 +11,9 @@ public class PlayerHealth : MonoBehaviour
     private Animator animator;
     public bool canTakeDamage = true;
 
-    public UIManager uiManager;
+    public GameObject life1;
+    public GameObject life2;
+    public GameObject life3;
 
     void Start()
     {
@@ -27,15 +29,19 @@ public class PlayerHealth : MonoBehaviour
     
         if (currentLives <= 0)
         {
-            GameObject life1Object = GameObject.Find("Life1");
-            life1Object.SetActive(false);
-
             //Dirigir a pantalla de Game Over
             Debug.Log("Oh oh");
 
             animator.Play("Die");
-            //StartCoroutine(WaitAndShowGameOverScreen());
-            uiManager.ShowGameOverScreen();
+
+            life2.SetActive(true);
+            life3.SetActive(true);
+            UIManager.Instance.DeactivateScreen(UIManager.UIScreen.HudScreen);
+
+            UIManager.Instance.ActivateScreen(UIManager.UIScreen.GameOverScreen);
+            UIManager.Instance.DeactivateScreen(UIManager.UIScreen.Level1Screen);
+            UIManager.Instance.DeactivateScreen(UIManager.UIScreen.Level2Screen);
+            UIManager.Instance.DeactivateScreen(UIManager.UIScreen.Level3Screen);
 
         } else if (currentLives <=1)
         {
@@ -65,14 +71,6 @@ public class PlayerHealth : MonoBehaviour
 
     public void EnableDamage(){
         canTakeDamage = true;
-    }
-
-    IEnumerator WaitAndShowGameOverScreen() {
-        // Wait for 1 second
-        yield return new WaitForSeconds(1);
-
-        // Call your function here
-        UIManager.Instance.ShowGameOverScreen();
     }
 }
 
