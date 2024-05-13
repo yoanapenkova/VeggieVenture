@@ -7,22 +7,28 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     public float maxLives = 3f; // Vidas máximas del jugador
-    private float currentLives; // Vidas actuales del jugador
+    public float currentLives; // Vidas actuales del jugador
+    private Animator animator;
+    public bool canTakeDamage = true;
 
     void Start()
     {
         currentLives = maxLives;
+        animator = GetComponent<Animator>();
     }
 
     public void LoseLife()
     {
         currentLives -= 1;
         Debug.Log("te quedan " + currentLives + " vidas");
+        canTakeDamage = false;
     
         if (currentLives <= 0)
         {
             //Dirigir a pantalla de Game Over
             Debug.Log("Oh oh");
+
+            animator.Play("Die");
         }
     }
 
@@ -39,6 +45,10 @@ public class PlayerHealth : MonoBehaviour
 
         SceneManager.LoadScene(currentSceneIndex);
 
+    }
+
+    public void EnableDamage(){
+        canTakeDamage = true;
     }
 }
 

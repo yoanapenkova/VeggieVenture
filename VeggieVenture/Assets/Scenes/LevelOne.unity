@@ -2446,7 +2446,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793610505}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.852, y: 0.9035, z: -0.061}
+  m_LocalPosition: {x: 1.557, y: 0.9035, z: -0.061}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2676,7 +2676,7 @@ PrefabInstance:
     - target: {fileID: 6271096243748920317, guid: a4a54d30e97ac40af84d8505fa63ef93, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9100000, guid: 141d11c03e43e418fb1bbd52802fbc29, type: 2}
     - target: {fileID: 6612974337440326847, guid: a4a54d30e97ac40af84d8505fa63ef93, type: 3}
       propertyPath: m_Name
       value: Player
@@ -3808,8 +3808,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orangePrefab: {fileID: 3738070186340914850, guid: b89057f7f951a6912a87568750dd0aa6, type: 3}
   launchPoint: {fileID: 1150192715}
-  minLaunchInterval: 1
-  maxLaunchInterval: 3
+  minLaunchInterval: 3
+  maxLaunchInterval: 5
   launchForce: 4
   rotationSpeed: 30
   player: {fileID: 860914870}
@@ -5425,8 +5425,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orangePrefab: {fileID: 3738070186340914850, guid: b89057f7f951a6912a87568750dd0aa6, type: 3}
   launchPoint: {fileID: 1743939474}
-  minLaunchInterval: 1
-  maxLaunchInterval: 3
+  minLaunchInterval: 3
+  maxLaunchInterval: 5
   launchForce: 4
   rotationSpeed: 30
   player: {fileID: 860914870}

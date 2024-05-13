@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float gravity = 20f; // Valor de gravedad
 
     private CharacterController characterController;
+    private Animator animator;
     private Vector3 moveDirection;
     private bool canDoubleJump = true; // Variable para rastrear si el jugador puede hacer un doble salto
     private bool canWallJump = true; // Variable para rastrear si el jugador puede hacer un salto sobre paredes
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -31,6 +33,9 @@ public class PlayerController : MonoBehaviour
         moveDirection = new Vector3(-horizontalInput * speed, moveDirection.y, -verticalInput * speed);
         moveDirection = transform.TransformDirection(moveDirection);
 
+        float playerSpeed = Mathf.Abs(horizontalInput) + Mathf.Abs(verticalInput);
+        animator.SetFloat("speed", playerSpeed);
+
         if (characterController.isGrounded)
         {
             canDoubleJump = true;
@@ -42,6 +47,7 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetButtonDown("Jump"))
             {
+                animator.Play("Jump");
                 moveDirection.y = jumpForce;
             }
         }
@@ -49,27 +55,11 @@ public class PlayerController : MonoBehaviour
         {
             if(Input.GetButtonDown("Jump"))
             {
+                animator.Play("Jump");
                 // Salto sobre paredes
                 if (canWallJump)
                 {
                     Debug.Log("VA A SALTAR SOBRE PARED " + lastWallJumpedFrom);
-                    //Debug.Log(lastWallJumpedFrom);
-                    /*
-                    RaycastHit hit;
-                    if (Physics.Raycast(transform.position, transform.forward, out hit, 1.5f))
-                    {
-                        Debug.Log(hit.collider);
-                        if (hit.collider.CompareTag("Wall") && hit.transform != lastWallJumpedFrom)
-                        {
-                            Debug.Log("SALTO");
-                            Debug.Log("HEY" + characterController.isGrounded);
-                            moveDirection = hit.normal * wallJumpForce;
-                            moveDirection.y = jumpForce;
-                            lastWallJumpedFrom = hit.transform;
-                            // canWallJump = false; // Desactivar la posibilidad de salto sobre paredes hasta que el jugador toque el suelo nuevamente
-                        }
-                    }
-                    */
                     
                     moveDirection = wallJumpNormal * wallJumpForce;
                     moveDirection.y = jumpForce;

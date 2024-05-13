@@ -9,9 +9,23 @@ public class DamageDealer : MonoBehaviour
         {
             // Obtener el componente PlayerHealth del jugador y llamar al método TakeDamage
             PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
+            if (playerHealth != null && playerHealth.canTakeDamage)
             {
                 playerHealth.LoseLife();
+            }
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        // Verificar si el objeto tocado tiene el tag 'Player'
+        if (other.CompareTag("Player"))
+        {
+            // Obtener el componente PlayerHealth del jugador y llamar al método TakeDamage
+            PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.EnableDamage();
             }
         }
     }
